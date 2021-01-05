@@ -1,0 +1,53 @@
+@media screen and (max-width: 1060px) {
+    #primary { width:67%; }
+    #secondary { width:30%; margin-left:3%;}  
+}
+
+/* Media Queries: Tabled Portrait */
+@media screen and (max-width: 768px) {
+    #primary { width:100%; }
+    #secondary { width:100%; margin:0; border:none; }
+}
+body{
+    background-image:url("images/lens.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 60% 100%;
+    opacity: unset;
+}
+
+.image2{
+    height:300px;
+    width:500px;
+    float:center;
+}
+#container{
+    font-family:cursive;
+    text-align:left;
+    color:purple;
+    float:right;  
+    width:40%; 
+    height:700px; 
+    background:linear-gradient(to right,aqua,rgb(13, 231, 42));
+}
+h3{
+    font-size: 30px;
+    color: blue;
+    font-weight:300px;
+    text-shadow: 2px 2px 6px yellow;
+    font-family: sans-serif;
+}
+#p{
+    padding: 10px;
+    margin: 10px;
+    color:purple;
+    font-weight: 600;
+    font-family: cursive;
+    font-size:18px;
+    border:3px solid blue;
+}
+li{
+    color:purple;
+    font-size: 28px;
+}
+

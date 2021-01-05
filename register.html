@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+    <title>register</title>
+</head>
+<body>
+    <div class="navbar">
+        <a href="index1.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="login.html">Survey</a>
+        <a href="register.html">Register</a>
+     </div>
+    <div class="container">
+    <div class="login-box">
+    <div class="row">
+    <div class="col-md-6">
+    <h2>Register here</h2>
+    <form action="registration.php" method="POST" >
+    <div class="form-group">
+    <label>Username</label>
+    <input type="text" name="user" class="form-control" required>
+    </div>
+    <div class="form-group">
+    <label>Password</label>
+    <input type="password" id="password" name="password" class="form-control" required>
+    </div>
+    <div class="form-group">
+    <label>Confirm Password</label>
+    <input type="password"  id="confirmpassword" name="cpassword" class="form-control" required>
+    </div>
+    
+    <button type="submit" id="button" class="btn btn-primary">Register</button>
+    &nbsp; &nbsp;
+    <a href="login.html">Already have an account|Login</a>
+    </form>
+    </div>
+    </div>
+    </div>
+    </div>
+</body>
+<script>
+    document.querySelector('#button').onclick=function(){
+        var password=document.querySelector('#password').value;
+        var confirmpassword=document.querySelector('#confirmpassword').value;
+        if(password==""){
+            alert("Field can't be empty");
+        }
+        else if(password!=confirmpassword){
+            alert("passwords did'nt match");
+            return false
+        }
+        else if(password==confirmpassword){
+            
+            return true
+        }
+    }
+    </script>
+</html>

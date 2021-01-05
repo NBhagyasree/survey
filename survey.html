@@ -1,0 +1,109 @@
+<?php
+  session_start();
+  if(!isset($_SESSION['username'])){
+      header('location:register.html');
+  }
+  ?>
+  <html>
+  <head>
+  <link rel="stylesheet" type="text/css" href="survey.css">
+
+  </head>
+      <body>
+          <div class="container">
+            <p>welcome <?php echo $_SESSION['username']; ?></p>
+          <header class="header">
+              <h1 id="title" class="text-center">Survey Form</h1>
+              <p id="description" class="description text-center">
+                Thank you for taking the time to help us and your opinion matters alot.
+              </p>
+            </header>
+            <form id="survey-form" action="ans.php" method="POST">
+              <div class="form-group">
+                <label id="name-label" for="name">Name</label>
+                <input type="text" name="name" id="name" class="form-control" placeholder="Enter your name" required/>
+              </div>
+              <div class="form-group">
+                <label id="email-label" for="email">Email</label>
+                <input type="email" name="email" id="email" class="form-control" placeholder="Enter your Email" required/>
+              </div>
+              <div class="form-group">
+                <label id="number-label" for="number">Registered number</label>
+                <input type="tel" name="number" id="number" class="form-control" placeholder="Enter your reg. id" required/>
+              </div>
+              <div class="form-group">
+                <p>Which branch are you persuing?</p>
+                <label>
+                    <input name="branch" value="CSE" type="radio" class="input-radio"/>CSE</label>
+                  <label>
+                    <input name="branch" value="IT" type="radio" class="input-radio"/>IT</label>
+                 <label><input name="branch" value="ECE"  type="radio" class="input-radio"/>ECE</label>
+                </div>
+          <div class="form-group">
+                <p>Are you satisfied with the teaching staff and their teaching methods?</p>
+                <label>
+                  <input name="q1"  value="satisfied"  type="radio"  class="input-radio"/>Satisfied</label>
+                <label>
+                  <input name="q1"  value="neutral"  type="radio" class="input-radio"/>Neutral</label>
+               <label><input name="q1"  value="not satisfied" type="radio"  class="input-radio"/>Not satisfied</label>
+              </div>
+              <div class="form-group">
+                    <p>How satisfied are you with the facilities provided by the college?</p>
+                    <label>
+                      <input name="q2" value="satisfied" type="radio" class="input-radio"/>Satisfied</label>
+                    <label>
+                      <input name="q2" value="neutral" type="radio" class="input-radio"/>Neutral</label>
+               <label>
+                      <input name="q2" value="not satisfied" type="radio" class="input-radio"/>Not satisfied</label>
+                  </div>
+                  <div class="form-group">
+                    <p>How supportive were the faculty members?</p>
+                    <label>
+                      <input name="q3" value="unhelpful" type="radio" class="input-radio"/>unhelpful</label>
+                    <label>
+                      <input name="q3" value="helpful" type="radio" class="input-radio"/>helpful</label>
+                    <label>
+                      <input name="q3" value="neither helpful nor unhelpful" type="radio" class="input-radio"/> neither helpful nor unhelpful</label>
+                  </div>
+                 
+                   <div class="form-group">
+                    <p>Do you think faculty and support staff at the college were helpful?</p>
+                    <label>
+                      <input name="q4" value="satisfied" type="radio" class="input-radio"/>unhelpful</label>
+                    <label>
+                      <input name="q4" value="neutral" type="radio" class="input-radio"/>Neutral</label>
+              <label>
+                  <input name="q4" value="not satisfied" type="radio" class="input-radio"/>Not satisfied</label>
+                  </div>
+                  <div class="form-group">
+                    <p>What do you think of the hostel?</p>
+                    <label>
+                      <input name="q5" value="extremely crowded" type="radio" class="input-radio"/>Extremely crowded</label>
+                    <label>
+                      <input name="q5"  value="somewhat crowded" type="radio" class="input-radio"/>some what crowded</label>
+                    <label>
+                      <input name="q5" value="not crowded" type="radio" class="input-radio"/>Not crowded</label>
+                  </div>
+                  <div class="form-group">
+                    <p>Was it easy to obtain the necessary resources from the college library?</p>
+                    <label>
+                      <input name="q6" value="yes" type="radio" class="input-radio"/>Yes</label>
+                    <label>
+                      <input name="q6" value="no" type="radio" class="input-radio"/>No</label>
+                  </div>
+                  <div class="form-group">
+                      <p>Please provide us with additional feedback on areas that need improvement</p>
+                       <label>
+                           <textarea rows="4" cols="50" name="comment" placeholder="enter text">
+                            </textarea>
+                       </label>
+                    </div>
+          <div class="form-group">
+                <button type="submit" id="submit" name="submit" class="submit-button">
+                  Submit
+                </button>
+              </div>
+            </form>
+          </div>
+    </body>
+  </html>
